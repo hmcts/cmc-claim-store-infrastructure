@@ -18,6 +18,26 @@ module "claim-store-api" {
     POSTGRES_DATABASE = "${module.claim-store-database.postgresql_database}"
     CLAIM_STORE_DB_USERNAME = "${module.claim-store-database.user_name}"
     CLAIM_STORE_DB_PASSWORD = "${module.claim-store-database.password}"
+    CLAIM_STORE_DB_CONNECTION_OPTIONS = "?ssl"
+
+    // idam
+    IDAM_API_URL = "https://unknown-url.reform.hmcts.net"
+
+    // notify
+    GOV_NOTIFY_API_KEY = "tbd"
+
+    // urls
+    FRONTEND_BASE_URL = "https://unknown-url.reform.hmts.net"
+    PDF_SERVICE_URL = "${module.pdf-service-api.url}"
+
+    // mail
+    SPRING_MAIL_HOST = "tbd"
+    SPRING_MAIL_PORT = "25"
+    SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE = "true"
+
+    // staff notifications
+    STAFF_NOTIFICATIONS_SENDER = "noreply@reform.hmcts.net"
+    STAFF_NOTIFICATIONS_RECIPIENT = "noreply@reform.hmcts.net" // TODO how to bring in per environment config, consul?
   }
 }
 
@@ -28,4 +48,9 @@ module "claim-store-database" {
   env = "${var.env}"
   postgresql_user = "claimstore"
   postgresql_password = "Password1" // TODO: keyvault?
+}
+
+module "pdf-service-api" {
+  source = "github.com/hmcts/pdf-service?ref=master"
+  env = "${var.env}"
 }

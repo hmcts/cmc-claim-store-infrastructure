@@ -48,6 +48,7 @@ module "claim-store-database" {
   env = "${var.env}"
   postgresql_user = "claimstore"
   postgresql_password = "Password1" // TODO: keyvault?
+  postgresql_database = "claimstore"
 }
 
 module "pdf-service-api" {

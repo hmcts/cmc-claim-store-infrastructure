@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('Infrastructure')
+@Library('Infrastructure@feature/make-infra-pipeline-work-on-pr')
 
 String product = 'cmc'
 

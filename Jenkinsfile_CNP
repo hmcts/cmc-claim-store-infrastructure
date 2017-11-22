@@ -1,6 +1,7 @@
 #!groovy
 
-@Library('Infrastructure@feature/make-infra-pipeline-work-on-pr')
+@Library('Infrastructure@feature/add-slack-integration')
+//@Library('Infrastructure@feature/make-infra-pipeline-work-on-pr')
 
 String product = 'cmc'
 

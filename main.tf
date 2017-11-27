@@ -1,5 +1,5 @@
 module "claim-store-api" {
-  source = "git@github.com/contino/moj-module-webapp.git?ref=0.0.78"
+  source = "git@github.com:contino/moj-module-webapp.git?ref=0.0.78"
   product = "${var.product}-${var.microservice}"
   location = "${var.location}"
   env = "${var.env}"
@@ -42,7 +42,7 @@ module "claim-store-api" {
 }
 
 module "claim-store-database" {
-  source = "git@github.com/contino/moj-module-postgres?ref=master"
+  source = "git@github.com:contino/moj-module-postgres?ref=master"
   product = "${var.product}"
   location = "West Europe"
   env = "${var.env}"
@@ -52,6 +52,6 @@ module "claim-store-database" {
 }
 
 module "pdf-service-api" {
-  source = "github.com/hmcts/pdf-service?ref=master"
+  source = "git@github.com:hmcts/pdf-service?ref=master"
   env = "${var.env}"
 }

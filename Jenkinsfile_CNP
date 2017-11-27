@@ -5,4 +5,4 @@
 
 String product = 'cmc'
 
-withInfrastructurePipeline product: 'cmc', slackChannel: '#cmc-tech-notification'
+withInfrastructurePipeline('cmc')

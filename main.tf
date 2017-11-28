@@ -52,6 +52,6 @@ module "claim-store-database" {
 }
 
 module "pdf-service-api" {
-  source = "github.com/hmcts/pdf-service?ref=master"
+  source = "github.com/hmcts/pdf-service"
   env = "${var.env}"
 }

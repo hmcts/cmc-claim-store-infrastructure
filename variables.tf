@@ -23,6 +23,6 @@ variable "infrastructure_env" {
 }
 
 variable "database-password" {
-  default = "not-a-real-password"
+  default = "Notarealpassword!"
   description = "Password for microservice database"
 }

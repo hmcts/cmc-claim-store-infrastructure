@@ -51,7 +51,3 @@ module "claim-store-database" {
   postgresql_database = "claimstore"
 }
 
-module "pdf-service-api" {
-  source = "github.com/hmcts/cmc-pdf-service-infrastructure"
-  env = "${var.env}"
-}

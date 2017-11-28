@@ -17,7 +17,7 @@ module "claim-store-api" {
     CLAIM_STORE_DB_PORT = "${module.claim-store-database.postgresql_listen_port}"
     POSTGRES_DATABASE = "${module.claim-store-database.postgresql_database}"
     CLAIM_STORE_DB_USERNAME = "${module.claim-store-database.user_name}"
-    CLAIM_STORE_DB_PASSWORD = "${module.claim-store-database.password}"
+    CLAIM_STORE_DB_PASSWORD = "${var.database-password}"
     CLAIM_STORE_DB_CONNECTION_OPTIONS = "?ssl"
 
     // idam
@@ -28,7 +28,7 @@ module "claim-store-api" {
 
     // urls
     FRONTEND_BASE_URL = "https://unknown-url.reform.hmts.net"
-    PDF_SERVICE_URL = "${module.pdf-service-api.url}"
+    PDF_SERVICE_URL = "${module.pdf-service-api.pdf-service-api-uri}"
 
     // mail
     SPRING_MAIL_HOST = "tbd"
@@ -47,7 +47,7 @@ module "claim-store-database" {
   location = "West Europe"
   env = "${var.env}"
   postgresql_user = "claimstore"
-  postgresql_password = "Password1" // TODO: keyvault?
+  postgresql_password = "${var.database-password}"
   postgresql_database = "claimstore"
 }
 

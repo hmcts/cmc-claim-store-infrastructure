@@ -21,3 +21,8 @@ variable "infrastructure_env" {
   default     = "dev"
   description = "Infrastructure environment to point to"
 }
+
+variable "database-password" {
+  default = "not-a-real-password"
+  description = "Password for microservice database"
+}

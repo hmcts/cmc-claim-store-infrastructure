@@ -2,4 +2,4 @@
 
 @Library('Infrastructure') _
 
-withInfrastructurePipeline('cmc')
+withInfrastructurePipeline('cmc-claim-store')

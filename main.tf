@@ -28,7 +28,7 @@ module "claim-store-api" {
 
     // urls
     FRONTEND_BASE_URL = "https://unknown-url.reform.hmts.net"
-    PDF_SERVICE_URL = "${module.pdf-service-api.pdf-service-api-uri}"
+    PDF_SERVICE_URL = "${var.pdf-service-url}"
 
     // mail
     SPRING_MAIL_HOST = "tbd"
@@ -49,9 +49,4 @@ module "claim-store-database" {
   postgresql_user = "claimstore"
   postgresql_password = "${var.database-password}"
   postgresql_database = "claimstore"
-}
-
-module "pdf-service-api" {
-  source = "github.com/hmcts/cmc-pdf-service-infrastructure"
-  env = "${var.env}"
 }

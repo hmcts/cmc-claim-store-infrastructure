@@ -26,3 +26,8 @@ variable "database-password" {
   default = "Notarealpassword!"
   description = "Password for microservice database"
 }
+
+variable "pdf-service-url" {
+  default = "https://not-a-real-host.com"
+  description = "Pdf service URL"
+}

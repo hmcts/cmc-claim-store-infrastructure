@@ -36,3 +36,7 @@ variable "document-management-url" {
   default = "https://not-a-real-host.com"
   description = "Document management URL"
 }
+
+variable "database-name" {
+  default = "postgres"
+}

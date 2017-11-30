@@ -17,6 +17,7 @@ module "claim-store-api" {
     POSTGRES_DATABASE = "${module.claim-store-database.postgresql_database}"
     CLAIM_STORE_DB_USERNAME = "${module.claim-store-database.user_name}"
     CLAIM_STORE_DB_PASSWORD = "${var.database-password}"
+    CLAIM_STORE_DB_NAME = "${var.database-name}"
     CLAIM_STORE_DB_CONNECTION_OPTIONS = "?ssl"
 
     // idam
@@ -48,5 +49,5 @@ module "claim-store-database" {
   env = "${var.env}"
   postgresql_user = "claimstore"
   postgresql_password = "${var.database-password}"
-  postgresql_database = "claimstore"
+  postgresql_database = "${var.database-name}"
 }

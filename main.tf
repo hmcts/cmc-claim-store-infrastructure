@@ -29,6 +29,7 @@ module "claim-store-api" {
     // urls
     FRONTEND_BASE_URL = "https://unknown-url.reform.hmts.net"
     PDF_SERVICE_URL = "${var.pdf-service-url}"
+    DOCUMENT_MANAGEMENT_API_GATEWAY_URL = "${var.document-management-url}"
 
     // mail
     SPRING_MAIL_HOST = "tbd"

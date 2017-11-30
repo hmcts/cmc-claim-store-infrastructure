@@ -7,7 +7,6 @@ module "claim-store-api" {
 
   app_settings = {
     //    logging vars
-    ROOT_APPENDER = "JSON_CONSOLE"
     REFORM_TEAM = "${var.product}"
     REFORM_SERVICE_NAME = "${var.microservice}"
     REFORM_ENVIRONMENT = "${var.env}"

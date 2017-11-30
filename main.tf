@@ -35,6 +35,7 @@ module "claim-store-api" {
     SPRING_MAIL_HOST = "tbd"
     SPRING_MAIL_PORT = "25"
     SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE = "true"
+    SPRING_MAIL_TEST_CONNECTION = "false" // TODO: remove after we get a mail gateway to use
 
     // staff notifications
     STAFF_NOTIFICATIONS_SENDER = "noreply@reform.hmcts.net"
